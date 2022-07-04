@@ -1,5 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.head-section {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.head-section > span{
+    margin: 10px;
+}
+
+a {
+    color: white;
+    font-weight: bolder;
+    
+}
+
+.air-logo {
+    width: 75px;
+    height: auto;
+    margin: 10px;
+}
+
 #map {
     width: 100%;
     height: 600px;
     box-shadow: 5px 5px 5px #888;
+}
+
+.info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.legend {
+    text-align: center;
+    line-height: 1px;
+    width: 80%;
+    color: black;
+    font-weight: bolder;
+    background-color: #687ede;
+    font-size: medium;
+}
+
+.legend_scale {
+    display: flex;
+    align-items: center;
+}
+
+.legend_scale > span {
+    margin: 10px;
 }
