@@ -14,3 +14,17 @@ This program is free software; you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+## Herramientas y repositorios utilizados en el proyecto
+
+[GeoServer](https://geoserver-pdf.readthedocs.io/en/latest/index.html)
+
+[Leaflet](https://leafletjs.com/)
+
+[Flask](https://flask.palletsprojects.com/en/2.1.x/)
+
+[Python](https://www.python.org/about/)
+
+[Python](https://www.javascript.com/)
+
+[PostgreSQL](https://www.postgresql.org/)
