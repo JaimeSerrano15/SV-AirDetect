@@ -6,8 +6,20 @@ var tiles = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}
         ' | Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy; <a href="https://carto.com/attribution">CARTO</a>',
     }).addTo(map);
 
+/*let logo = L.control( {
+    position: "bottomleft"
+});
+logo.onAdd = map => {
+    let div = L.DomUtil.create("div","info");
+    div.innerHTML +=
+    '<h2><img src="">Control de Aire de El Salvador</h2>';
+    return div;
+}; logo.addTo(map);*/
+
 // control that shows state info on hover
 var info = L.control();
+
+let mainLayer = "";
 
 info.onAdd = function (map) {
     this._div = L.DomUtil.create('div', 'info');
@@ -15,33 +27,41 @@ info.onAdd = function (map) {
     return this._div;
 };
 
+const selectedLayer = (data) => {
+    //console.log(data);
+    const labels = mainLayer.split(" ");
+    const year_label = labels.length - 1;
+    console.log(labels);
+    return (data[`${labels[2]}_${labels[year_label]}`])
+};
+
 info.update = function (props) {
-    this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
-        '<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>' : 'Hover over a state');
+    const selLayer = props && selectedLayer(props);
+    this._div.innerHTML = `<h4>${mainLayer  }</h4>` +  (props ?
+        '<b>' + props.name + '</b><br />' + selLayer + ' μg / m<sup>3</sup>' : 'Coloque el cursor sobre el Departamento');
 };
 
 info.addTo(map);
 
-
-// get color depending on population density value
+//let colors = ["#0d99a3","#dade0b","#e0570d","#941f04","#be21cc","#3d0342"]
+// get color depending on the ozone level
 function getColor(d) {
-    return d > 1000 ? '#800026' :
-        d > 500  ? '#BD0026' :
-        d > 200  ? '#E31A1C' :
-        d > 100  ? '#FC4E2A' :
-        d > 50   ? '#FD8D3C' :
-        d > 20   ? '#FEB24C' :
-        d > 10   ? '#FED976' : '#FFEDA0';
+    console.log(d);
+    return d >= 150  ? '#be21cc' :
+        d >= 100  ? '#941f04' :
+        d >= 50  ? '#e0570d' :
+        d >= 20   ? '#dade0b' :
+        d >= 0   ? '#0d99a3' : '#FFEDA0';
 }
 
-function style(feature) {
+function style({properties}) {
     return {
         weight: 2,
         opacity: 1,
         color: 'white',
         dashArray: '3',
         fillOpacity: 0.7,
-        fillColor: getColor(feature.properties.density)
+        fillColor: getColor(selectedLayer(properties))
     };
 }
 
@@ -62,7 +82,7 @@ function highlightFeature(e) {
     info.update(layer.feature.properties);
 }
 
-var geojson;
+var geojson, geoAux;
 
 function resetHighlight(e) {
     geojson.resetStyle(e.target);
@@ -87,29 +107,92 @@ geojson = L.geoJson(departamentos, {
     onEachFeature: onEachFeature
 }).addTo(map);
 
-map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+map.on("baselayerchange", ({layer}) => {
+    mainLayer = document.querySelector("input[class=leaflet-control-layers-selector]:checked + span")
+    .innerHTML.trim();
+    layer.setStyle(style);
+});
 
+geoAux = L.geoJson(departamentos, {
+    style: style,
+    onEachFeature: onEachFeature
+});
 
-var legend = L.control({position: 'bottomright'});
+let years_labels = [];
+
+for (let year = 2018; year <= 2022; year++) {
+    years_labels.push({
+        label: `${year}`,
+        collapsed: true,
+        children: [
+            {label: `Nivel de Ozono ${year}`, layer: geoAux},
+            {label: `Nivel de Particula Fina ${year}`, layer: geoAux},
+            {label: `Nivel de Materia Particulada ${year}`, layer: geoAux},
+            {label: `Nivel de Monoxido de Carbono ${year}`, layer: geoAux},
+        ],
+    });
+}
+
+L.control.layers.tree(years_labels).addTo(map);
+
+info.addTo(map);
+
+map.attributionControl.addAttribution('ACA-SIG Project - Group 4');
+
+var legend = L.control({position: 'bottomleft'});
 
 legend.onAdd = function (map) {
 
-    var div = L.DomUtil.create('div', 'info legend');
-    var grades = [0, 10, 20, 50, 100, 200, 500, 1000];
-    var labels = [];
-    var from, to;
+    let div = L.DomUtil.create('div', 'info legend');
+    let grades = [0, 20, 50, 100, 150, 250];
+    let labels = ["<h3><strong>Rangos</Strong></h3><br>"];
+    let colors = ["#0d99a3","#dade0b","#e0570d","#941f04","#be21cc","#3d0342"]
+    let from, to;
 
-    for (var i = 0; i < grades.length; i++) {
+    for (let i = 0; i < grades.length - 1; i++) {
         from = grades[i];
         to = grades[i + 1];
 
         labels.push(
-            '<i style="background:' + getColor(from + 1) + '"></i> ' +
-            from + (to ? '&ndash;' + to : '+'));
+            `<i class="material-icons icon" style="font-size:25px;color:${colors[i]};text-shadow:2px 2px 4px #000000;">cloud</i>`
+            + "<p> " + from + (to ? ' &ndash; ' + to : '+') + "</p> " + " <br> ");
     }
 
-    div.innerHTML = labels.join('<br>');
+    div.innerHTML = labels.join('');
     return div;
 };
 
 legend.addTo(map);
+
+let legend_scale = L.control({ position: "bottomright"});
+
+legend_scale.onAdd = (map) => {
+    let div = L.DomUtil.create('div', 'info legend_scale');
+    let labels = ['<h3><strong>Escala de Calidad de Aire</Strong></h3><br>'];
+
+    labels.push(
+        "<span> " +
+        "Excelente" +
+        "</span> " +
+        "<span> " +
+        "Buena" +
+        "</span> " +
+        "<span> " +
+        "Mala" +
+        "</span> " +
+        "<span> " +
+        "Poco Saludable" +
+        "</span> " +
+        "<span> " +
+        "Muy Poco Saludable" +
+        "</span> " +
+        "<span> " +
+        "Peligrosa" +
+        "</span>"
+    );
+    div.innerHTML = labels.join("<br>");
+
+    return div;
+};
+
+legend_scale.addTo(map);
