@@ -1,9 +1,11 @@
 # SV-AirDetect
 
-Descripción
+## Descripción
+
 AirDetect es una plataforma web utilizada para analizar la calidad del aire en las diferentes zonas del país, y ya que esta información varía cada año, el objetivo es hacer predicciones de cómo se encontrará dicha información durante los siguientes años, con el fin de analizar las zonas en donde el aire ha ido empeorando o mejorando su calidad, y poderlo relacionar con posibles causantes y/o productores de dicha contaminación ambiental.
 
-Licencia
+## Licencia
+
 AirDetect
 Copyright (C) 2022 Bruce Montenegro, Alejandro Cader, Jaime Serrano, Miguel Cruz, Edith López
 
