@@ -22,9 +22,9 @@ Leaflet es una biblioteca JavaScript de código abierto que se utiliza para crea
 Licencia: [BSD 2-Clause](https://opensource.org/licenses/BSD-2-Clause)
 
 [Python](https://www.python.org/about/)
-Python: Python es un lenguaje de programación de alto nivel que se utiliza para desarrollar aplicaciones de todo tipo. A diferencia de otros lenguajes como Java o .NET, se trata de un lenguaje interpretado, es decir, que no es necesario compilarlo para ejecutar las aplicaciones escritas en Python, sino que se ejecutan directamente por el ordenador utilizando un programa denominado interpretador, por lo que no es necesario “traducirlo” a lenguaje máquina.
+Python es un lenguaje de programación de alto nivel que se utiliza para desarrollar aplicaciones de todo tipo. A diferencia de otros lenguajes como Java o .NET, se trata de un lenguaje interpretado, es decir, que no es necesario compilarlo para ejecutar las aplicaciones escritas en Python, sino que se ejecutan directamente por el ordenador utilizando un programa denominado interpretador, por lo que no es necesario “traducirlo” a lenguaje máquina.
 Licencia: [PSFL](https://www.python.org/psf/license/). 
 
 [Javascript](https://www.javascript.com/)
-Javascript:: JavaScript es un lenguaje de programación o de secuencias de comandos que  permite implementar funciones complejas en páginas web.
+JavaScript es un lenguaje de programación o de secuencias de comandos que  permite implementar funciones complejas en páginas web.
 
