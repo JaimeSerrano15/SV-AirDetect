@@ -257,4 +257,20 @@ img {
     font-family: Lato;
 }
 
+.chartCard {
+    width: 100vw;
+    height: calc(100vh - 1px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chartBox {
+    width: 80vw;
+    padding: 20px;
+    border-radius: 20px;
+    border: solid 3px rgba(255, 26, 104, 1);
+    background: white;
+}
+
 

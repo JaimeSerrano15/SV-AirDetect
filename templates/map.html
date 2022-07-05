@@ -14,6 +14,8 @@
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
     crossorigin=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -21,13 +23,27 @@
         <img class="air-logo" src="https://icon-library.com/images/air-element-icon/air-element-icon-21.jpg" alt="aire-logo">
         <span><a href="./index.html">Home</a></span>
         <span><a href="./map.html">Map</a></span>
-        <span><a href="./about.html">About</a></span>
         </div>
     </header>
     <div id="map"></div>
+    <div>
+        <div class="chartCard">
+            <div class="chartBox">
+              <canvas id="myChart"></canvas>
+              <select id="selected-year" onchange="updateYear()">
+                <option value="year_2018">2018</option>
+                <option value="year_2019">2019</option>
+                <option value="year_2020">2020</option>
+                <option value="year_2021">2021</option>
+                <option value="year_2022">2022</option>
+              </select>
+            </div>
+        </div>
+    </div>
 
     <script src="../javascripts/L.Control.Layers.Tree.js"></script>
     <script src="../javascripts/departamente.js"></script>
     <script src="../javascripts/MainMap.js"></script>
+    <script src="../javascripts/chartMethod.js"></script>
 </body>
 </html>

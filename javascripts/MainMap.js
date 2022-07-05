@@ -37,8 +37,8 @@ const selectedLayer = (data) => {
 //  Función que se encarga de actualizar el cuadro informativo de cada departamento en relación a la capa seleccionada.
 info.update = function (props) {
     const selLayer = props && selectedLayer(props);
-    this._div.innerHTML = `<h4>${mainLayer  }</h4>` +  (props ?
-        '<b>' + props.name + '</b><br />' + selLayer + ' μg / m<sup>3</sup>' : 'Coloque el cursor sobre el Departamento');
+    this._div.innerHTML = `<h4>${mainLayer}</h4>` +  (props ?
+        '<b>' + props.name + '</b><br />' + (selLayer ? selLayer : 'X') + ' μg / m<sup>3</sup>' : 'Coloque el cursor sobre el Departamento');
 };
 
 //  Agregando controlador de información de capas al mapa
