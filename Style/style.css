@@ -1,29 +1,79 @@
 body {
     margin: 0;
     padding: 0;
+    background: rgb(2,0,36);
+background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(227,227,247,1) 0%, rgba(165,183,242,1) 96%);
 }
 
-.head-section {
+.head-section, .foot-section {
+    height: 80px;
     background-color: blue;
     display: flex;
     align-items: center;
     justify-content: left;
+    border: solid #040936 2px;
 }
 
 .head-section > span{
-    margin: 10px;
+    margin: 10px 25px 10px 25px;
+    font-size: larger;
+}
+
+.foot-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements-list > div {
+    margin: 2em;
+}
+
+.git-logo {
+    width: 75px;
+    height: auto;
+    color: white;
+}
+
+.field-logo {
+    width: 8em;
+    height: auto;
+}
+
+.foot-section > p {
+    color: white;
+    font-weight: bolder;
+    width: 200px;
+    text-align: center;
 }
 
 a {
     color: white;
     font-weight: bolder;
-    
+
 }
 
 .air-logo {
     width: 75px;
     height: auto;
     margin: 10px;
+}
+
+img {
+    width: 500px;
+    height: auto;
+}
+
+.about-section {
+    height: 35em;
+    width: auto;
 }
 
 #map {
