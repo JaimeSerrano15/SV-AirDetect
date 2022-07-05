@@ -9,13 +9,21 @@ body {
 background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(227,227,247,1) 0%, rgba(165,183,242,1) 96%);
 }
 
-.head-section, .foot-section {
+.head-section {
     height: 80px;
-    background-color: blue;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: left;
     border: solid #040936 2px;
+}
+
+.foot-section {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .head-section > span{
@@ -23,11 +31,6 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(227,227,247,1) 0%, rgb
     font-size: larger;
 }
 
-.foot-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .elements-list {
     display: flex;
@@ -54,7 +57,6 @@ background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(227,227,247,1) 0%, rgb
 .foot-section > p {
     color: white;
     font-weight: bolder;
-    width: 200px;
     text-align: center;
 }
 
@@ -113,3 +115,146 @@ img {
 .legend_scale > span {
     margin: 10px;
 }
+
+.about {
+    text-align: center;
+    font-family: Lato;
+    display: flex;
+    flex-direction: row;
+    /* background-image: url('https://commoditytrading.guru/wp-content/uploads/2019/02/specialty-coffee-origins-el-salvador-vulcano-view-sunrise.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px -80px; */
+    height: 350px;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 600;
+    width: 50%;
+    align-self: center;
+    color: white;
+    margin: 0px 3rem;
+}
+
+.title > span {
+    font-size: 2rem;
+    font-weight: 400;
+    color: black;
+    border-top: 3px solid #040936;
+    padding-top: 1rem;
+}
+
+.about_info {
+    text-align: justify;
+    margin: 0px 30px;
+    width: 50%;
+    align-self: center;
+}
+
+.about_info > p {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.main_sections {
+    display: flex;
+    flex-direction: row;
+}
+
+.main_sections > div {
+    width: 50%;
+    height: 450px;
+    padding: 24px;
+    margin: 0;
+}   
+
+.consists {
+    background-image: url('../Static/Images/contamination.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.importance {
+    background-image: url('../Static/Images/air-lab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.content {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+}
+
+.content > h2 {
+    font-size: 2rem;
+
+}
+
+.consists .content > p {
+    font-weight: 400;
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: start;
+}
+
+.importance .content > p {
+    font-weight: 400;
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 25px;
+    text-align: end;
+}
+
+.elements_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.elements_container > h2{
+    text-align: center;
+    border-bottom: 1px solid #040936;
+    font-size: 32px;
+    font-family: Lato;
+    width: fit-content;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px;
+    border-radius: 10px;
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 15px -3px #040936, 0 4px 6px -4px #040936;
+    text-align: center;
+    background-color: white;
+}
+
+.card > h3 {
+    font-size: 1.6rem;
+    font-family: Lato;
+}
+.card > p {
+    font-size: 1rem;
+    font-family: Lato;
+}
+
+

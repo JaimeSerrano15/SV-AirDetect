@@ -6,14 +6,18 @@
 }
 
 .leaflet-layerstree-node {
+    color: black;
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .leaflet-layerstree-header input{
-    margin-left: 0px;
+    margin-left: 10px;
 }
 
 
 .leaflet-layerstree-header {
+
 }
 
 .leaflet-layerstree-header-pointer {
@@ -35,7 +39,9 @@
 }
 
 .leaflet-layerstree-children {
-    padding-left: 10px;
+    padding-left: 15px;
+    font-size: 0.8rem;
+    font-weight: 400;
 }
 
 .leaflet-layerstree-children-nopad {
