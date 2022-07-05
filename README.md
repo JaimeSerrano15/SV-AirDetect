@@ -7,7 +7,7 @@ AirDetect es una plataforma web utilizada para analizar la calidad del aire en l
 ## Licencia
 
 AirDetect
-Copyright (C) 2022 Bruce Montenegro, Alejandro Cader, Jaime Serrano, Miguel Cruz, Edith López
+Copyright (C) 2022  Jaime Serrano, Edith López, Alejandro Pinto, Miguel Cruz, Bruce Montenegro, 
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version (collectively, "GPL").
 
