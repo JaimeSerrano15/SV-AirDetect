@@ -28,3 +28,18 @@ Licencia: [PSFL](https://www.python.org/psf/license/).
 [Javascript](https://www.javascript.com/)
 JavaScript es un lenguaje de programación o de secuencias de comandos que  permite implementar funciones complejas en páginas web.
 
+##Contribuidores
+<table align="center">
+  <tr>
+    <td align="center"><a href="https://github.com/jaimeserrano15"><img src="https://avatars.githubusercontent.com/u/54144612?v=4" width="100px;" alt=""/><br /><sub><b>  Jaime Serrano </b></sub></a><br /> <a href="#" title="Diseño">🎨</a> <a href="#" title="Código">💻</a> </td>
+    
+    <td align="center"><a href="https://github.com/elopezt"><img src="https://avatars.githubusercontent.com/u/52590436?v=4" width="100px;" alt=""/><br /><sub><b>Edith López</b></sub></a><br /><a href="#" title="Documentación">📑</a> <a href="#" title="Diseño">🎨</a> </td>
+    
+    <td align="center"><a href="https://github.com/alejandropinto99"><img src="https://avatars.githubusercontent.com/u/54134322?v=4" width="100px;" alt=""/><br /><sub><b> Alejandro Pinto</b></sub></a><br /><a href="#" title="Código">💻</a> <a href="#" title="Diseño">🎨</a> <a href="#" title="Diseño">🎨</a>  </td>
+    
+    <td align="center"><a href="https://github.com/alejandrocader"><img src="https://avatars.githubusercontent.com/u/54159574?v=4" width="100px;" alt=""/><br /><sub><b> Alejandro Cader </b></sub></a><br /><a href="#" title="Documentación">📑</a> </td>    
+    
+    <td align="center"><a href="https://github.com/idubbbztv3"><img src="https://avatars.githubusercontent.com/u/37233419?v=4" width="100px;" alt=""/><br /><sub><b>Bruce Montenegro </b></sub></a><br /><a href="#" title="Documentación">📑</a>  </td>
+      
+  </tr>
+</table>
