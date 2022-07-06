@@ -67,9 +67,10 @@ a {
 }
 
 .air-logo {
-    width: 75px;
-    height: auto;
-    margin: 10px;
+    width: 100px;
+    height: 81px;
+    margin: 0;
+    padding: 0;
 }
 
 img {

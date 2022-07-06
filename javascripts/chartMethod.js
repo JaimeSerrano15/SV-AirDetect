@@ -6,38 +6,38 @@
 
 //  Definiendo la información de cada año de los elementos analizados.
 const year_2018 = [
-    {x: 'Nivel de Ozono', y:100},
-    {x: 'Nivel de Particula Fina', y:200},
-    {x: 'Nivel de Materia Particulada', y:300},
-    {x: 'Nivel de Monoxido de Carbono', y:400},
+    {x: 'Nivel de Ozono', y:210},
+    {x: 'Nivel de Particula Fina', y:252},
+    {x: 'Nivel de Materia Particulada', y:255},
+    {x: 'Nivel de Monoxido de Carbono', y:1},
 ];
 
 const year_2019 = [
-    {x: 'Nivel de Ozono', y:50},
-    {x: 'Nivel de Particula Fina', y:150},
-    {x: 'Nivel de Materia Particulada', y:250},
-    {x: 'Nivel de Monoxido de Carbono', y:350},
+    {x: 'Nivel de Ozono', y:225},
+    {x: 'Nivel de Particula Fina', y:249},
+    {x: 'Nivel de Materia Particulada', y:257},
+    {x: 'Nivel de Monoxido de Carbono', y:1},
 ];
 
 const year_2020 = [
-    {x: 'Nivel de Ozono', y:75},
-    {x: 'Nivel de Particula Fina', y:175},
-    {x: 'Nivel de Materia Particulada', y:275},
-    {x: 'Nivel de Monoxido de Carbono', y:375},
+    {x: 'Nivel de Ozono', y:227},
+    {x: 'Nivel de Particula Fina', y:255},
+    {x: 'Nivel de Materia Particulada', y:260},
+    {x: 'Nivel de Monoxido de Carbono', y:1},
 ];
 
 const year_2021 = [
-    {x: 'Nivel de Ozono', y:125},
-    {x: 'Nivel de Particula Fina', y:225},
-    {x: 'Nivel de Materia Particulada', y:325},
-    {x: 'Nivel de Monoxido de Carbono', y:425},
+    {x: 'Nivel de Ozono', y:231},
+    {x: 'Nivel de Particula Fina', y:259},
+    {x: 'Nivel de Materia Particulada', y:257},
+    {x: 'Nivel de Monoxido de Carbono', y:1},
 ];
 
 const year_2022 = [
-    {x: 'Nivel de Ozono', y:150},
-    {x: 'Nivel de Particula Fina', y:250},
-    {x: 'Nivel de Materia Particulada', y:350},
-    {x: 'Nivel de Monoxido de Carbono', y:450},
+    {x: 'Nivel de Ozono', y:232},
+    {x: 'Nivel de Particula Fina', y:257},
+    {x: 'Nivel de Materia Particulada', y:259},
+    {x: 'Nivel de Monoxido de Carbono', y:1},
 ];
 
 //  Definiendo la data que contendrá el gráfico: Sus labels, la información base, colores, entre otras.
