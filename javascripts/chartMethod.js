@@ -1,4 +1,10 @@
-// setup 
+/*
+    Aquí se encuentra definida la lógica para la creación, población y renderización del gráfico de barras que contiene
+    la información resumida de los diferentes elementos analizados con el pasar de los años. Esto fue posible gracias a
+    la librería ChartJS (https://www.chartjs.org/).
+*/
+
+//  Definiendo la información de cada año de los elementos analizados.
 const year_2018 = [
     {x: 'Nivel de Ozono', y:100},
     {x: 'Nivel de Particula Fina', y:200},
@@ -34,6 +40,7 @@ const year_2022 = [
     {x: 'Nivel de Monoxido de Carbono', y:450},
 ];
 
+//  Definiendo la data que contendrá el gráfico: Sus labels, la información base, colores, entre otras.
 const data = {
     datasets: [{
       label: 'Cantidad en el Aire',
@@ -54,7 +61,7 @@ const data = {
     }]
   };
 
-  // config 
+  //    Definiendo la configuración del gráfico.
   const config = {
     type: 'bar',
     data,
@@ -70,12 +77,13 @@ const data = {
     }
   };
 
-  // render init block
+  //    Renderización del gráfico.
   const myChart = new Chart(
     document.getElementById('myChart'),
     config
 );
 
+//  Función que se encarga de tomar el año seleccionado por el usuario y actualizar el gráfico con la información de dicho año.
 function updateYear() {
     let year = document.getElementById("selected-year").value;
 
