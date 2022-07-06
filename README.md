@@ -1,5 +1,9 @@
 # 💨SV-AirDetect💨
-![Esta es una imagen](https://github.com/JaimeSerrano15/SV-AirDetect/blob/main/Static/Images/logo.png?raw=true)
+<p align="center">
+    <span>
+        <img src="https://github.com/JaimeSerrano15/SV-AirDetect/blob/main/Static/Images/logo.png?raw=true" width="250" alt="Crime Reporter SV" />
+    </span>
+</p>
 
 ## 🧾Descripción
 
