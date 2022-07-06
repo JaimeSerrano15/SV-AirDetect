@@ -161,7 +161,7 @@ legend.onAdd = function (map) {
     let div = L.DomUtil.create('div', 'info legend');
     let grades = [0, 20, 50, 100, 150, 250];
     let labels = ["<h3><strong>Rangos</Strong></h3><br>"];
-    let colors = ["#0d99a3","#dade0b","#e0570d","#941f04","#be21cc","#3d0342"]
+    let colors = ["#0d99a3","#dade0b","#e0570d","#941f04","#be21cc","#3d0342"];
     let from, to;
 
     for (let i = 0; i < grades.length - 1; i++) {
@@ -187,24 +187,25 @@ let legend_scale = L.control({ position: "bottomright"});
 legend_scale.onAdd = (map) => {
     let div = L.DomUtil.create('div', 'info legend_scale');
     let labels = ['<h3><strong>Escala de Calidad de Aire</Strong></h3><br>'];
+    let colors = ["#0d99a3","#dade0b","#e0570d","#941f04","#be21cc","#3d0342"];
 
     labels.push(
-        "<span> " +
+        `<span style="color:#0d99a3;font-weight: bolder;">` +
         "Excelente" +
         "</span> " +
-        "<span> " +
+        `<span style="color:#787a06;font-weight: bolder;">` +
         "Buena" +
         "</span> " +
-        "<span> " +
+        `<span style="color:#e0570d;font-weight: bolder;">` +
         "Mala" +
         "</span> " +
-        "<span> " +
+        `<span style="color:#941f04;font-weight: bolder;">` +
         "Poco Saludable" +
         "</span> " +
-        "<span> " +
+        `<span style="color:#be21cc;font-weight: bolder;">` +
         "Muy Poco Saludable" +
         "</span> " +
-        "<span> " +
+        `<span style="color:#3d0342;font-weight: bolder;">` +
         "Peligrosa" +
         "</span>"
     );
