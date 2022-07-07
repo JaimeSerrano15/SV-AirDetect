@@ -9,6 +9,10 @@
 
 AirDetect es una plataforma web utilizada para analizar la calidad del aire en las diferentes zonas del país, y ya que esta información varía cada año, el objetivo es hacer predicciones de cómo se encontrará dicha información durante los siguientes años, con el fin de analizar las zonas en donde el aire ha ido empeorando o mejorando su calidad, y poderlo relacionar con posibles causantes y/o productores de dicha contaminación ambiental.
 
+## 👨‍🏫[Manual de Usuario](https://github.com/JaimeSerrano15/SV-AirDetect/wiki/Manual-de-Usuario)
+
+## 💻[Manual Técnico](https://github.com/JaimeSerrano15/SV-AirDetect/wiki/Manual-T%C3%A9cnico)
+
 ## 📑Licencia
 
 AirDetect
@@ -43,3 +47,4 @@ Chart.js es una biblioteca JavaScript gratuita de código abierto para la visual
     <td align="center"><a href="https://github.com/idubbbztv3"><img src="https://avatars.githubusercontent.com/u/37233419?v=4" width="100px;" alt=""/><br /><sub><b>Bruce Montenegro </b></sub></a><br /><a href="#" title="Documentación">📑</a>  </td>    
   </tr>
 </table>
+
